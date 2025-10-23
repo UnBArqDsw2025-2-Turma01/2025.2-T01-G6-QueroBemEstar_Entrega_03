@@ -119,25 +119,58 @@ O servidor estará disponível em: `http://localhost:3000`
 
 ```
 src/
-├── domain/               # Lógica de negócio
-│   ├── entities/         # Entidades do domínio
-│   └── usecases/         # Interfaces de casos de uso
-├── application/          # Casos de uso e protocolos
-│   ├── protocols/        # Interfaces de contrato
-│   └── usecases/         # Implementação dos casos de uso
-├── infra/                # Infraestrutura
-│   └── database/         # Conexões e repositórios
-│       └── typeorm/      # Implementações TypeORM
-├── presentation/         # Apresentação
-│   ├── controllers/      # Controllers
-│   ├── errors/           # Custom errors
-│   ├── helper/           # Helpers
-│   └── protocols/        # Protocolos da camada
-└── main/                 # Configuração principal
-    ├── adapters/         # Adaptadores (Express)
-    ├── config/           # Configurações
-    ├── factories/        # Factory Pattern
-    └── routes/           # Definição de rotas
+├── domain/                     # Lógica de negócio
+│   ├── entities/               # Entidades do domínio
+│   │   └── Competition.ts      # Entidade de competição
+│   └── usecases/               # Interfaces de casos de uso
+│       └── create-competition-interface.ts
+├── application/                # Casos de uso e protocolos
+│   ├── protocols/              # Interfaces de contrato
+│   │   └── db/                 # Protocolos de banco de dados
+│   │       └── create-competition-repository.ts
+│   └── usecases/               # Implementação dos casos de uso
+│       └── create-competition.ts
+├── infra/                      # Infraestrutura
+│   └── database/               # Conexões e repositórios
+│       └── typeorm/            # Implementações TypeORM
+│           ├── typeorm-connection.ts
+│           ├── typeorm-connection.spec.ts
+│           ├── models/         # Modelos de dados
+│           │   └── competition-model.ts
+│           └── repositories/   # Repositórios
+│               └── competition-repository.ts
+├── presentation/               # Apresentação
+│   ├── controllers/            # Controllers
+│   │   ├── create-competition-controller.ts
+│   │   └── create-group-controller.ts
+│   ├── errors/                 # Custom errors
+│   │   ├── invalid-param-error.ts
+│   │   └── missing-param-error.ts
+│   ├── helper/                 # Helpers
+│   │   └── http-helper.ts
+│   └── protocols/              # Protocolos da camada
+│       ├── controller.ts
+│       ├── http.ts
+│       └── validation.ts
+├── validation/                 # Camada de validação
+│   └── validators/             # Validadores
+│       ├── required-field-validation.ts
+│       ├── number-validation.ts
+│       └── validation-composite.ts
+└── main/                       # Configuração principal
+    ├── server.ts               # Entrada da aplicação
+    ├── adapters/               # Adaptadores
+    │   └── express-route-adapter.ts
+    ├── config/                 # Configurações
+    │   ├── app.ts              # Configuração da aplicação
+    │   ├── env.ts              # Variáveis de ambiente
+    │   └── routes.ts           # Configuração de rotas
+    ├── factories/              # Factory Pattern
+    │   └── controllers/
+    │       ├── create-competition-factory.ts
+    │       └── create-competition-validation-factory.ts
+    └── routes/                 # Definição de rotas
+        └── competition-routes.ts
 ```
 
 ## 🧪 Testes
