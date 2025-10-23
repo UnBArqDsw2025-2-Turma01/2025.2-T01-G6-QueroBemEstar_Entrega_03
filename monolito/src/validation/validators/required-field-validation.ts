@@ -1,0 +1,13 @@
+import { MissingParamError } from "@/presentation/errors/missing-param-error"
+import { Validation } from "@/presentation/protocols/validation"
+
+export class RequiredFieldValidation implements Validation {
+  constructor(private readonly fieldName: string) {}
+
+  validate(input: any): Error | null {
+    if (!input[this.fieldName]) {
+      return new MissingParamError(`${String(this.fieldName)}`)
+    }
+    return null
+  }
+}
