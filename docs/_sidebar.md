@@ -16,7 +16,7 @@
     - [3.3. Padrões de Projeto GoFs Comportamentais](./PadroesDeProjeto/3.3.GoFsComportamentais.md)
       - [3.3.1. Comportamental 1](./PadroesDeProjeto/3.3.1.Comportamental1.md)
       - [3.3.2. Comportamental 2](./PadroesDeProjeto/3.3.2.Comportamental2.md)
-      - [3.3.3. Comportamental 3](./PadroesDeProjeto/3.3.3.Comportamental3.md)
+      - [3.3.3. Mediator](./PadroesDeProjeto/3.3.3.Mediator.md)
     - [3.4. Participações - Padrões de Projeto](./PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](./PadroesDeProjeto/3.5.IniciativasExtras.md)
       
