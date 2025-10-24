@@ -13,7 +13,7 @@
       - [3.2.4. Composite](./PadroesDeProjeto/3.2.3.Estrutural4.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](./PadroesDeProjeto/3.3.GoFsComportamentais.md)
       - [3.3.1. Strategy](./PadroesDeProjeto/3.3.1.Comportamental1.md)
-      - [3.3.2. Comportamental 2](./PadroesDeProjeto/3.3.2.Comportamental2.md)
+      - [3.3.2. Observer](PadroesDeProjeto/3.3.2.Observer.md)
       - [3.3.3. Mediator](./PadroesDeProjeto/3.3.3.Mediator.md)
     - [3.4. Participações - Padrões de Projeto](./PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](./PadroesDeProjeto/3.5.IniciativasExtras.md)
