@@ -30,7 +30,6 @@ export class CompetitionMediator implements IMediator {
     if (!ownerId) return;
 
     const message = `${likedBy} curtiu seu post ${postId}`;
-    // Persistir notificação via NotificationService
     this.notificationService.notify(ownerId, message);
     if (this.onNotify) this.onNotify(message);
 
@@ -39,7 +38,6 @@ export class CompetitionMediator implements IMediator {
   }
 
   postCreated(postId: string, userId: string, competitionId: string) {
-    // Notifica criação de post (persistente) — premiação é feita quando likes chegam ao requisito
     const message = `Post ${postId} criado na competição ${competitionId}`;
     this.notificationService.notify(userId, message);
     if (this.onNotify) this.onNotify(message);
