@@ -1,3 +1,3 @@
-export interface Validation<T = unknown> {
-  validate: (input: T) => Error | null
+export interface Validation {
+  validate: (input: any) => Error | null
 }
