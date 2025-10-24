@@ -1,0 +1,59 @@
+### Criar usuário
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nomeDeUsuario": "chef_maria",
+  "nome": "Maria",
+  "sobrenome": "Silva",
+  "email": "maria@example.com",
+  "senha": "segredo"
+}
+
+### Listar usuários
+GET http://localhost:3000/api/usuarios
+
+### Criar receita (use o id retornado da criação de usuário)
+POST http://localhost:3000/api/receitas
+Content-Type: application/json
+
+{
+  "titulo": "Salada Colorida",
+  "descricao": "Uma salada saudável e rápida.",
+  "ingredientes": ["Alface", "Tomate", "Cenoura"],
+  "modoPreparo": "Misture tudo e sirva gelado.",
+  "autorId": 1
+}
+
+### Listar receitas
+GET http://localhost:3000/api/receitas
+
+### Registrar avaliação na receita
+POST http://localhost:3000/api/receitas/2/avaliacoes
+Content-Type: application/json
+
+{
+  "autorId": 1,
+  "nota": 4.5
+}
+
+### Criar competição
+POST http://localhost:3000/api/competicoes
+Content-Type: application/json
+
+{
+  "nome": "Desafio Fitness",
+  "descricao": "Competição de check-ins de bem-estar",
+  "adminId": 1
+}
+
+### Listar competições
+GET http://localhost:3000/api/competicoes
+
+### Adicionar participante à competição
+POST http://localhost:3000/api/competicoes/3/participantes
+Content-Type: application/json
+
+{
+  "usuarioId": 1
+}
