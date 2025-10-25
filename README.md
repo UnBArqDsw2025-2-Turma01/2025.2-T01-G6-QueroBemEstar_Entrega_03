@@ -1,12 +1,45 @@
-# RepositorioTemplate
+# Padrões de Projeto GoFs
 
-Repositório que deve ser utilizado como template inicial pelos grupos da matéria de Arquitetura e Desenho de Software.
+Este repositório contém o material e as implementações desenvolvidas pelo grupo durante a disciplina de **Desenho de Software**, com foco no estudo e aplicação dos **Padrões de Projeto GoF (Gang of Four)**.  
+O objetivo do trabalho é compreender como esses padrões contribuem para o **desenvolvimento de sistemas mais organizados, flexíveis e reutilizáveis**, aplicando boas práticas de arquitetura e engenharia de software.
 
-## Introdução
+---
 
-Este repositório traz um template de repo de documentação a ser seguido pelos grupos de arquitetura e desenho de software.
+## 📘 Estrutura do Projeto
 
-## Tecnologia
+O conteúdo foi dividido em três módulos principais, de acordo com a classificação clássica dos padrões GoF:
+
+### 🔹 3.1. Padrões de Projeto GoFs Criacionais
+Exploram maneiras de **criar objetos de forma controlada e flexível**, abstraindo o processo de instanciação e promovendo o desacoplamento entre a criação e o uso dos objetos.  
+Esses padrões ajudam a manter o código limpo e extensível, evitando dependências rígidas em classes concretas.
+
+### 🔹 3.2. Padrões de Projeto GoFs Estruturais
+Focam na **organização e composição de classes e objetos**, buscando formar estruturas maiores sem comprometer a simplicidade.  
+Esses padrões permitem integrar componentes, adicionar funcionalidades e construir arquiteturas modulares e de fácil manutenção.
+
+### 🔹 3.3. Padrões de Projeto GoFs Comportamentais
+Tratam da **interação entre objetos** e da forma como a comunicação é estabelecida dentro do sistema.  
+Esses padrões ajudam a reduzir o acoplamento e a definir fluxos de comportamento dinâmicos e extensíveis.
+
+---
+
+## 🧠 Objetivo Geral
+
+O projeto teve como propósito principal **aprofundar o entendimento sobre os Padrões de Projeto GoF** e **aplicá-los na prática**, analisando como cada categoria contribui para a melhoria do design de software.  
+Com isso, foi possível desenvolver uma visão mais crítica sobre a importância da arquitetura e das boas práticas na construção de sistemas robustos e escaláveis.
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+
+- **Linguagem:** TypeScript
+- **Ambiente de Desenvolvimento:** Node.js  
+- **Ferramentas:** Visual Studio Code, GitHub Pages  
+- **Controle de Versão:** Git  
+
+---
+
+## Tecnologia (Documentação)
 
 A geração do site estático é realizada utilizando o [docsify](https://docsify.js.org/).
 
